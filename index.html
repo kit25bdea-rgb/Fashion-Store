@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store - Online Clothes Shop</title>
+
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- my own css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+
+        <a href="#home" class="navbar-brand site-logo">
+            <i class="bi bi-bag-heart-fill"></i> Fashion Store
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="myNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="#mens" class="nav-link">Men's</a></li>
+                <li class="nav-item"><a href="#womens" class="nav-link">Women's</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <a href="#cart" class="nav-link">
+                        <i class="bi bi-cart3"></i> Cart (<span id="cartCount">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+</header>
+
+
+<main>
+
+<!-- ========== HOME PAGE BANNER (CAROUSEL) ========== -->
+<section id="home">
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- dots for slides -->
+    <div class="carousel-indicators">
+        <button data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+        <button data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+        <button data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+        <!-- slide 1 -->
+        <div class="carousel-item active">
+            <div class="banner-box banner1">
+                <div class="banner-text">
+                    <h1>Welcome to Fashion Store</h1>
+                    <p>Buy good quality clothes online.</p>
+                    <a href="#products" class="btn btn-light">Shop Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- slide 2 -->
+        <div class="carousel-item">
+            <div class="banner-box banner2">
+                <div class="banner-text">
+                    <h1>Men's Collection</h1>
+                    <p>T-Shirt, Hoodie, Jeans, Jacket and more.</p>
+                    <a href="#mens" class="btn btn-light">View Men's</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- slide 3 - women collection with image -->
+        <div class="carousel-item">
+            <div class="banner-box banner3">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728ad8a02?w=1600&q=80" class="banner-img" alt="Women shopping">
+                <div class="banner-text">
+                    <h1>Women's Collection</h1>
+                    <p>Dress and other stylish clothes for women.</p>
+                    <a href="#womens" class="btn btn-light">View Women's</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- left right arrow -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+</section>
+
+
+<!-- ========== FEATURED PRODUCTS ========== -->
+<section class="py-5 bg-light">
+<div class="container">
+    <h2 class="page-heading text-center">Featured Clothing</h2>
+    <p class="text-center text-muted">Popular items right now</p>
+    <br>
+    <div class="row" id="featuredBox">
+        <!-- javascript will put cards here -->
+    </div>
+</div>
+</section>
+
+
+<!-- ========== ALL PRODUCTS + SEARCH ========== -->
+<section id="products" class="py-5">
+<div class="container">
+    <h2 class="page-heading text-center">All Products</h2>
+    <p class="text-center text-muted">Search and buy clothes</p>
+    <br>
+
+    <!-- search bar -->
+    <div class="row">
+        <div class="col-md-6 mx-auto mb-4">
+            <input type="text" class="form-control" id="searchInput" placeholder="Type product name to search...">
+        </div>
+    </div>
+
+    <div class="row" id="productBox">
+        <!-- javascript will put cards here -->
+    </div>
+
+    <p class="text-center text-muted" id="searchEmpty" hidden>Sorry, no product found.</p>
+</div>
+</section>
+
+
+<!-- ========== MEN COLLECTION ========== -->
+<section id="mens" class="py-5 bg-light">
+<div class="container">
+    <h2 class="page-heading text-center">Men's Collection</h2>
+    <p class="text-center text-muted">For men</p>
+    <br>
+    <div class="row" id="menBox">
+        <!-- javascript will put cards here -->
+    </div>
+</div>
+</section>
+
+
+<!-- ========== WOMEN COLLECTION ========== -->
+<section id="womens" class="py-5">
+<div class="container">
+    <h2 class="page-heading text-center">Women's Collection</h2>
+    <p class="text-center text-muted">For women</p>
+    <br>
+    <div class="row" id="womenBox">
+        <!-- javascript will put cards here -->
+    </div>
+</div>
+</section>
+
+
+<!-- ========== SHOPPING CART ========== -->
+<section id="cart" class="py-5 bg-light">
+<div class="container">
+    <h2 class="page-heading text-center">Shopping Cart</h2>
+    <p class="text-center text-muted">Your selected items</p>
+    <br>
+
+    <div class="cart-wrap">
+
+        <table class="table table-bordered bg-white">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Sub Total</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="cartTable">
+                <tr id="cartEmptyRow">
+                    <td colspan="6" class="text-center py-4">No items in cart yet.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <span>Total Items: <b id="itemCount">0</b></span>
+            <span>Grand Total: <b id="grandTotal">$0.00</b></span>
+            <span>
+                <button class="btn btn-sm btn-outline-danger" id="btnClear" disabled>Clear Cart</button>
+                <button class="btn btn-sm btn-success" id="btnOrder" disabled>Submit Order</button>
+            </span>
+        </div>
+
+        <div class="alert alert-success mt-3" id="orderDone" hidden>
+            Thank you! Your order was submitted successfully.
+        </div>
+
+    </div>
+</div>
+</section>
+
+
+<!-- ========== CONTACT PAGE ========== -->
+<section id="contact" class="py-5">
+<div class="container">
+<div class="row">
+
+    <div class="col-md-5">
+        <h2 class="page-heading">Contact Us</h2>
+        <p class="text-muted">Fill the form if you have any question.</p>
+
+        <ul class="my-contact-list">
+            <li><i class="bi bi-geo-alt"></i> 123 Fashion jhapa</li>
+            <li><i class="bi bi-envelope"></i> info@fashionstore.com</li>
+            <li><i class="bi bi-phone"></i> +977 9800000000</li>
+        </ul>
+
+        <h5>Shop Time</h5>
+        <ul>
+            <li>Mon - Fri : 9 AM - 8 PM</li>
+            <li>Saturday : 10 AM - 6 PM</li>
+            <li>Sunday : Closed</li>
+        </ul>
+    </div>
+
+    <div class="col-md-7">
+        <form id="myForm" class="p-4 form-area">
+
+            <label>Name</label>
+            <input type="text" id="txtName" class="form-control mb-1">
+            <small id="errName" class="text-danger" hidden>Enter your name please</small>
+            <br>
+
+            <label>Email</label>
+            <input type="email" id="txtEmail" class="form-control mb-1">
+            <small id="errEmail" class="text-danger" hidden>Enter correct email</small>
+            <br>
+
+            <label>Message</label>
+            <textarea id="txtMsg" class="form-control mb-1" rows="4"></textarea>
+            <small id="errMsg" class="text-danger" hidden>Write your message</small>
+            <br>
+
+            <button type="submit" class="btn btn-dark w-100">Send Message</button>
+
+            <div class="alert alert-success mt-3" id="formOk" hidden>
+                Message sent! We will contact you soon.
+            </div>
+
+        </form>
+    </div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-foot">
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <h5>Fashion Store</h5>
+            <p>This is our online clothes shop. We sell fashion items for everyone.</p>
+        </div>
+
+        <div class="col-md-4">
+            <h5>Links</h5>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#mens">Men's</a></li>
+                <li><a href="#womens">Women's</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-4">
+            <h5>Social Media</h5>
+            <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="soc-btn"><i class="bi bi-twitter-x"></i></a>
+        </div>
+
+    </div>
+    <hr>
+    <p class="text-center">Copyright 2026 Fashion Store</p>
+</div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
